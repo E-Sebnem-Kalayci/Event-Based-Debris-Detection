@@ -5,9 +5,9 @@ In comparison to frame based cameras that capture full images at a fixed rate, e
 Event cameras doesn't store frames, they store 'events' which is formatted as (x, y, t, p) == x and y coordinates of pixels, timestamps, polarity change (this is different for each camera type. Our study is based on the EVK-4 which stores polarity as 1 (increase in brightness) and 0 (decrease in brightness))
 
 # Event to Frame Construction
-If data is not stored as images but only as text files how are we going to turn these events into actual images to see the object? This algortihm could be coded with the Python or C++ API provided by Prophesee https://docs.prophesee.ai/stable/guides/frames_generators.html as a *next step*. However without access to an event camera, for now, we are using the Florence RGB Event Dataset that has events already converted into images to test our detection and tracking codes.
+If data is not stored as images but only as text files how are we going to turn these events into actual images to see the object? This algortihm could be coded with the Python or C++ API provided by Prophesee https://docs.prophesee.ai/stable/guides/frames_generators.html as a *next step*. However without access to an event camera, we are using the Florence RGB Event Dataset that has events already converted into images to test our detection and tracking codes.
 
-Our algorithm's purpose is to first detect any debris approaching the satellite, track the detected debris with a green box, determine how fast the object is approaching the satellite, and send a warning message to later trigger reaction mechanisms.
+Our algorithm's purpose is to first detect any debris approaching the satellite, track the detected debris with a green box, determine how fast the object is approaching the satellite, to later trigger reaction mechanisms.
 
 # Denoise
 ...see the code...
